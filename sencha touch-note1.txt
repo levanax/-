@@ -1,0 +1,243 @@
+Versions :
+Sencha Cmd v6.0.0.202
+Sencha sdk - 2.4.2
+
+介绍：
+https://en.wikipedia.org/wiki/Sencha_Touch
+Sencha Touch 框架是世界上第一个基于HTML 5的Mobile App框架。同时，ExtJS也正式更名为Sencha。原域名www.extjs.com也已经跳转至www.sencha.com。
+Sencha Touch 可以让你的Web App看起来像Native App。美丽的用户界面组件和丰富的数据管理，全部基于最新的HTML 5和CSS3的 WEB标准，全面兼容Android和iOS设备。
+
+特性：
+  ● 基于最新的WEB标准 – HTML 5，CSS3，JavaScript。整个库在压缩和gzip后大约80KB，通过禁用一些组件还会使它更小。 
+  ● 支持世界上最好的设备。兼容Android和iOS，Android上的开发人员还可以使用一个专为Android定制的主题。 
+  ● 增强的触摸事件。在touchstart等标准事件基础上，增加了一组自定义事件数据集成，如tap、swipe、pinch、rotate等。 
+  ● 数据集成。提供了强大的数据包，通过Ajax、JSONp、YQL等方式绑定到组件模板，写入本地离线存储。
+
+特点（个人观点：
+  ● 所有视图都是采用 Javascript 动态生成。
+  ● Extend / Override
+
+--------------------------------------------------------------------------------
+*app.json
+*resources/sass/app.scss  app 主题风格配置
+
+*本地化插件 i18next http://i18next.com/
+    language.js
+
+*文件命名规则
+--------------------------------------------------------------------------------
+
+文件夹说明
+app/
+commons  ST工具包
+config 配置相关
+controller 控制器
+router 路由
+model 数据模型
+store 数据仓库
+plugin ST插件
+UX  自定义ST组件，与重写ST组件
+view 视图
+profile 移动设备个性化定制
+setting
+        json配置文件
+plugins 
+        第三方插件
+locales
+        语言包
+
+note:
+setting json autoLoad
+
+----------------------------------------------------------------------
+Views；
+Ext.navigation.View
+Ext.tab.Panel
+
+controller;
+          refs
+router
+init
+launch
+model；
+validations
+convert
+hasMany *关系映射
+store;
+porxy
+sorters
+filters
+group
+
+profile;
+
+
+*Ext.XTemplate
+
+
+
+--------------------------------------------------------------------------------
+End.
+
+
+
+
+
+
+
+资料：
+  ● 官网引导： http://docs.sencha.com/touch/2.4/getting_started/getting_started.html
+  ● Sencha touch 官方博客资料： https://www.sencha.com/blog/category/sencha-touch/
+  ● Sencha touch ： http://www.cnblogs.com/anorthwolf/p/3744045.html
+  ● 控制器学习：http://www.cnblogs.com/dowinning/archive/2012/02/16/2354772.html
+  ● 自定义组件：https://www.sencha.com/blog/building-sencha-touch-customer-components-part-1/
+  ● 主题相关：http://docs.sencha.com/touch/2.4/components/theming.html
+  ● http://www.cnblogs.com/mlzs/p/3420900.html
+
+可能遇到问题：
+  ● https://docs.sencha.com/cmd/6.x/intro_to_cmd.html#Using_Older_Frameworks
+
+常用命令 
+  ● $sencha -sdk /sdkPath/to/touch generate app AppName /appPath -生成项目
+  ● $sencha web -port 9000 start - 启动服务
+  ● $sencha app build testing - 编译app 打包
+  ● $sencha ant sass - 编译sass文件
+  ● $sencha ant sass -watch  ， listener
+  ● $sencha app refresh
+http://docs.sencha.com/cmd/6.x/advanced_cmd/cmd_reference.html
+
+
+https://www.sencha.com/forum/showthread.php?275603-Getting-a-field-data-from-Parent-model-inside-child-model-using-belongsTo-Assosiation
+
+
+--------------------------------------------------------------------------------
+
+-----资料：
+https://market.sencha.com/extensions
+
+1.sencha cmd 创建项目
+http://www.kankanews.com/ICkengine/archives/92599.shtml
+
+2.用sass自定义主题样式
+http://www.tuicool.com/articles/MZbqmu
+
+3.sencha touch扩展博客 及入门
+http://www.cnblogs.com/mlzs/tag/sencha%20touch%20%E6%89%A9%E5%B1%95/default.html?page=1
+http://www.cnblogs.com/cjpx00008/category/561236.html
+
+4.ST参考项目
+https://github.com/cjpx00008/sencha-touch-demo-ccicloud-offline
+https://bitbucket.org/moLangZaiShi/demo/
+
+5.字体图标 St自带图标参考
+http://pictos.cc/classic/font
+http://blog.csdn.net/lovelyelfpop/article/details/20392429
+https://icomoon.io/app/#/select （图标下载）
+
+
+https://fortawesome.github.io/Font-Awesome/icons/
+
+--------------------------------------------------------------------------------
+sencha build 注意事项：
+1.  在app.json文件内，配置copy第三方插件包/json file 到build dir
+
+
+注意认真阅读所有 error info. https://docs.sencha.com/cmd/6.x/intro_to_cmd.html#Using_Older_Frameworks
+
+
+File to import not found or unreadable: blueprint/typography.
+http://compass-blueprint.org/install/
+  1. gem update --system
+  2. gem install compass-blueprint
+  3. compass create <myproject> --using blueprint
+
+File not found or cannot be read: D:/Levana.Xue/ScriptProjectSpace/ScriptSpace-s
+ynchronization/SenchaTouchDemo/resources/sass/fonts/pictos/pictos-web.woff
+http://stackoverflow.com/questions/26214353/sencha-touch-2-4-0-sass-compile-error
+https://www.sencha.com/blog/using-app-watch/
+
+
+--------------------------------------------------------------------------------
+
+C:\Users\levana.xue>ruby -v
+ruby 2.1.6p336 (2015-04-13 revision 50298) [x64-mingw32]
+
+C:\Users\levana.xue>compass -v
+Compass 1.0.3 (Polaris)
+Copyright (c) 2008-2015 Chris Eppstein
+Released under the MIT License.
+Compass is charityware.
+Please make a tax deductable donation for a worthy cause: http://umdf.org/compas
+s
+
+[ERR] The following error occurred while executing this line:
+D:\Levana.Xue\ScriptProjectSpace\ScriptSpace-synchronization\SenchaTouchDemo\.se
+ncha\app\build-impl.xml:286: The following error occurred while executing this l
+ine:
+D:\Levana.Xue\ScriptProjectSpace\ScriptSpace-synchronization\SenchaTouchDemo\.se
+ncha\app\sass-impl.xml:280: The following error occurred while executing this li
+ne:
+D:\Levana.Xue\ScriptProjectSpace\ScriptSpace-synchronization\SenchaTouchDemo\.se
+ncha\app\sass-impl.xml:286: Problem: failed to create task or type x-compass-com
+pile
+Cause: The name is undefined.
+Action: Check the spelling.
+Action: Check that any custom tasks/types have been declared.
+Action: Check that any <presetdef>/<macrodef> declarations have taken place.
+
+
+Resolve method ,
+Plz ref :https://docs.sencha.com/cmd/6.x/intro_to_cmd.html#Using_Older_Frameworks
+
+--------------------------------------------------------------------------------
+
+
+[ERR] C2009: YUI Parse Error (missing name after . operator =>   return options.
+long) -- unknown-file:3983:21
+[ERR] C2009: YUI Parse Error (identifier is a reserved word =>     ? long(val))
+-- unknown-file:3984:11
+[ERR] C2009: YUI Parse Error (identifier is a reserved word =>     : short(val);
+) -- unknown-file:3985:12
+[ERR] C2009: YUI Parse Error (missing ( before function parameters. => function
+short(ms) {) -- unknown-file:4035:15
+[ERR] C2009: YUI Parse Error (missing } after function body => function short(ms
+) {) -- unknown-file:4035:15
+[ERR] C2009: YUI Parse Error (missing ; before statement =>   if (ms >= d) retur
+n Math.round(ms / d) + 'd';) -- unknown-file:4036:22
+[ERR] C2009: YUI Parse Error (missing ) after argument list => function long(ms)
+ {) -- unknown-file:4051:9
+[ERR] C2009: YUI Parse Error (identifier is a reserved word => function long(ms)
+
+
+YUI 为 Sencha touch 打包时 代码严谨性检查插件
+以上错误是因为project 用到 socket.io.js 包 导致
+--------------------------------------------------------------------------------
+
+
+1.Andriod 键盘遮挡 textfiled
+if (Ext.os.is.Android) { //maybe target more specific android versions.
+            Ext.Viewport.on('painted', function() {
+                Ext.Viewport.setHeight(window.innerHeight);
+            });
+ }
+http://stackoverflow.com/questions/15596111/sencha-touch-2-1-form-panel-keyboard-hides-active-textfield-on-android
+
+--------------------------------------------------------------------------------
+
+点击穿透问题
+解决办法：e.preventDefault();
+事件冒泡，是停留当前位置 冒泡，并不是以dom往外层，在click之前
+附：https://github.com/ftlabs/fastclick
+
+--------------------------------------------------------------------------------
+javascript doc 工具：https://github.com/senchalabs/jsduck/tree/master
+
+
+----------------------------------------------
+dataview list 无自动高度，替代方案：
+
+https://jayupadhyay.wordpress.com/2013/09/11/sencha-ext-list-with-auto-height-solution/
+
+-----------------------------------
+
+
